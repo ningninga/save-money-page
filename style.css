@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #3c3c3c;
+	font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+h1,
+h3 {
+	text-align: center;
+}
+.clicked {
+	background-color: #ed5565;
+}
+
+div.mainbox {
+	margin: 0px auto;
+	width: 1300px;
+}
+div.topbox {
+	height: 130px;
+}
+table {
+	border-collapse: collapse;
+	margin: 0px auto;
+}
+
+td {
+	border: 1px #31302e dashed;
+	width: 50px;
+	height: 26px;
+	text-align: center;
+}
+.topbox select {
+	float: right;
+	margin-left: 5px;
+}
+td>a {
+	display: block;
+	width: 50px;
+}

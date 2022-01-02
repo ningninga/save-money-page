@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="common.js"></script>
+</head>
+<body>
+	<div class="mainbox">
+		<div class="topbox">
+			<h1>365天存钱计划</h1>
+			<h3>❤开始日:
+				<span class="startDate"></span>
+				&nbsp;&nbsp;&nbsp;❤结束日:
+				<span class="endDate"></span>
+				&nbsp;&nbsp;&nbsp;❤目标金额:
+				<span class="targetMoney"></span>
+			</h3>
+			<select class="intervalMoney" onchange="changeNumber()">
+				<option value="0.1">0.1</option>
+				<option value="0.2">0.2</option>
+				<option value="0.5">0.5</option>
+			</select>
+			<select class="startMoney" onchange="changeNumber()">
+				<option value="0.1">0.1</option>
+				<option value="0.5">0.5</option>
+				<option value="1">1</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+			</select>
+			
+		</div>
+		<table>
+			<tbody id="generate-table">
+				
+			</tbody>
+		</table>
+	</div>
+	<script>
+		createTable();
+		// 初始化回填
+		fillNumber(0.1,0.1);
+		// 回填日期
+		getDate();
+		// 回填目标金额
+		calMoney();
+		getStartAndIntervalMoney();
+	</script>
+</body>
+</html>
