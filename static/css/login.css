@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #3c3c3c;
+	text-align: center;
+}
+div.login-box {
+	width: 300px;
+	height: 200px;
+	margin: 200px auto;
+	border-radius: 20px;
+
+}
+div h2 {
+	text-align: center;
+	margin: 5px auto 0px auto;
+	padding: 15px 0px 0px 0px;
+
+}
+div#login {
+	margin: 20px auto 0px auto;
+}
+div#login span {
+	padding: 5px 0px;
+	width: 50px;
+	display: inline-block;
+}
+input {
+	border: none;
+	border-radius: 2px;
+	padding: 5px 9px;
+	outline: none;
+}
+.click-login {
+	height: 30px;
+	width: 80px;
+	display: inline-block;
+	background-color: #71b456;
+	border-radius: 10px;
+	cursor: pointer;
+	line-height: 30px;
+	color: white;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-left: 50px;
+	text-decoration: none;
+}
+.click-login:hover {
+	background-color: #333333;
+}
+.login-box {
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.23);
+}
+.forget-pwd {
+	margin: 0px 0px 0px 140px;
+	font-size: 12px;
+	color: red;
+}
+.click-register {
+ 	color: #72787e;
+ 	margin: 0px 0px 0px 10px;
+ 	font-size: 14px;
+ 	cursor: pointer;
+}

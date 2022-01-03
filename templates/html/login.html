@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+
+ 	<div class="login-box">
+ 		<h2>用户登录</h2>
+ 		<div id="login">
+ 			<div>
+ 				<span>用户名</span>
+ 				<input type="text" id="username" placeholder="请输入用户名" autocomplete="off">
+ 			</div>
+ 			<div>
+ 				<span>密码</span>
+ 				<input type="password" id="password" placeholder="请输入密码">
+ 			</div>
+ 		</div>
+ 		<a class="forget-pwd" href="">忘记密码？</a>
+ 		<div class="button">
+ 			<a class="click-login" onclick="login()">登录</a>
+ 			<a class="click-register" href="register.html">注册账户</a>
+ 		</div>
+	</div>
+	<script type="text/javascript" src="../../static/js/jquery-3.5.1.min.js"></script>	
+	<script type="text/javascript">
+	 	function login() {
+	 		var url = 'http://ningninga.4zcf.com:1789/login';
+	 		var username = $('#username').val();
+	 		var password = $('#password').val();
+	 		$.ajax({
+ 				url: url,
+				type: "post",
+				data: {
+  					'username': username,
+  					'password': password,
+ 				},
+ 				success: function (data) {
+  					if (data.message === 'error') {
+  						alert(data.result);
+   
+  					} else if (data.message === 'warning') {
+  						alert(data.result);
+   
+  					} else {
+  						window.location.href = "index.html?username=" + username;
+   
+  					}
+ 				},
+ 				error: function (result) {
+  
+ 				},
+			 	dataType: 'json',
+			 	timeout: 30 * 1000,
+			});
+
+	 	}
+	</script>
+	
+	
+</body>
+</html>

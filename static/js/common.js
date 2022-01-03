@@ -95,10 +95,19 @@ function getStartAndIntervalMoney(){
 
 //下拉菜单改变初始金额和间隔金额并由此修改表格中的数字
 function changeNumber() {
-	var getMoney= getStartAndIntervalMoney();
-	fillNumber(getMoney.selectStartMoney,getMoney.selectIntervalMoney);
-	// 修改初始金额和间隔金额之后都重置目标金额
-	calMoney();
+	var getMoney = getStartAndIntervalMoney();
+	var result = confirm("真的要切换吗，修改为初始金额为" + getMoney.selectStartMoney + ",间隔金额为" + getMoney.selectIntervalMoney +".原先的记录都没有了哦");
+	if (result){
+		fillNumber(getMoney.selectStartMoney,getMoney.selectIntervalMoney);
+		// 修改初始金额和间隔金额之后都重置目标金额
+		calMoney();
+		//清空页面上已改变颜色的单元格的颜色
+		// var coloredTds = document.getElementById('generate-table').getElementsByClassName('clicked');
+		// Array.prototype.forEach.call(coloredTds, function (element) {
+  //       	element.setAttribute('class','');
+  //   	});
+  		$('td.clicked').attr('class','');
+	}	
 }
 
 //点击金额单元格，出现确认弹窗，改变单元格背景颜色

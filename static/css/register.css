@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #3c3c3c;
+	text-align: center;
+}
+div.register-box {
+	width: 300px;
+	height: 300px;
+	margin: 200px auto;
+	border-radius: 20px;
+}
+div h2 {
+	text-align: center;
+	margin: 5px auto 0px auto;
+	padding: 15px 0px 0px 0px;
+
+}
+div#login {
+	margin: 20px auto 0px auto;
+}
+div#login span {
+	padding: 3px 0px;
+	width: 80px;
+	display: inline-block;
+	margin-top: 10px;
+}
+input {
+	border: none;
+	border-radius: 2px;
+	padding: 5px 9px;
+	outline: none;
+}
+.click-register {
+	height: 30px;
+	width: 80px;
+	display: inline-block;
+	background-color: #71b456;
+	border-radius: 10px;
+	cursor: pointer;
+	line-height: 30px;
+	color: white;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 86px;
+
+}
+.click-login:hover,
+.click-register:hover {
+	background-color: #333333;
+}
+.register-box {
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.23);
+}
+.back-to-login {
+ 	color: #72787e;
+ 	margin: 0px 0px 0px 10px;
+ 	font-size: 14px;
+ 	cursor: pointer;
+}
